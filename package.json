@@ -1,0 +1,40 @@
+{
+  "name": "strider-nginx",
+  "version": "1.0.0",
+  "description": "Deploy to NGINX",
+  "main": "webapp.js",
+  "scripts": {
+    "test": "mocha -R spec --recursive test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitwit/strider-template.git"
+  },
+  "keywords": [
+    "strider",
+    "plugin",
+    "template"
+  ],
+  "author": "Ilya Radchenko <ilya@burstcreations.com>",
+  "license": "ISC",
+  "dependencies": {
+    "nginx-vhosts": "0.0.4",
+    "portfinder": "^0.3.0"
+  },
+  "strider": {
+    "type": "job",
+    "id": "strider-nginx",
+    "title": "Plugin Template",
+    "worker": "worker.js",
+    "webapp": "webapp.js",
+    "icon": "icon.png",
+    "config": {
+      "controller": "TemplateCtrl"
+    }
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.20.1",
+    "sinon-chai": "^2.5.0"
+  }
+}
